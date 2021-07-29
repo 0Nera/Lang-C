@@ -9,7 +9,9 @@ if exist "./bin/" (
     echo Building
 )
 
-start %TCC% %FLAGS% HelloWorld/HelloWorld.c -o bin/HelloWorld.exe
-tcc %FLAGS% HelloWorld/HelloWorld2.c -o bin/HelloWorld2.exe
+tcc %FLAGS% src/HelloWorld/HelloWorld.c -o bin/HelloWorld.exe
+tcc %FLAGS% src/HelloWorld/HelloWorld2.c -o bin/HelloWorld2.exe
+
+tcc %FLAGS% src/random/fill_massive.c -o bin/fill_massive.exe
 
 pause
