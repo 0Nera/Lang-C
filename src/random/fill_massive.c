@@ -1,14 +1,16 @@
 #include <stdio.h>
+#define ARR_SIZE 1024 * 256 * 8 + 1
+
 
 int main(){
 
     int i = 0;
     int r = 0;
-    int massive[256];
+    int massive[ARR_SIZE];
     srand();
 
 
-    while (i!=256){
+    while (i!=ARR_SIZE){
         r = rand();
         massive[i] = r;
         i++;
@@ -16,7 +18,7 @@ int main(){
     i = 0;
 
 
-    while (i!=256){
+    while (i!=ARR_SIZE){
         printf("massive[%d] = %d\n", i, massive[i]);
         i++;
     }
